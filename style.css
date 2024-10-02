@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+.container{
+    max-width: 1300px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: auto;
+}
+
+/*------head section---*/
+
+.head{
+    display: flex;
+}
+P{
+    color: #555;
+}
+
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col2{
+    flex-basis: 50%;
+    min-width: 300px;
+
+}                                                                         /*Need to be work on it from zero*/
+.col2 img{
+    max-width: 100%;
+    padding: 50px 0;
+    align-items: flex-end;
+}
+.col2 h1{
+    font-size: 50px;
+    line-height: 40px;
+    margin: 25px 0;
+}
+
+/*----fetaured categories------*/
+.catagories{
+    margin: 70px 0;
+}
+.col3{
+   
+    min-width: 280px;
+    margin-bottom: 30px;
+}
+.col3 img{
+    width: 100%;
+    padding:20px
+
+}
+
+.small-container{
+    display: flex;
+    justify-content: center;
+    max-width: 108px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/*-----offer section---*/
+
+.offer{
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top: 80px;
+    padding:30px 0;
+}
+                                                                  /*need to be work on it*/
+.small-container1{
+    display: flex;
+    display: inline-block;
+    width:108px;
+}
+.small-container1 img{
+    max-height: 100px;
+    width:30px;
+}
+
+.offer .col2{
+    display: inline-block;
+}
+
+
+
+/*----brands--------*/
+h2{
+text-align: center;
+text-decoration: underline;
+color: black;
+font-size: 30px;
+}
+.brands{
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.brands ul li{
+    display: inline-block;
+
+}
+
+.brands img{
+width: 100%;
+height: 60px;
+cursor: pointer;
+filter: grayscale(100%);
+}
+
+.brands img:hover{
+    filter: grayscale(0);
+}
+
+
+
+
+
+/*-------footer-----*/
+
+.footer{
+    background-color: black;
+    color: #555;
+    font-size: 14px;
+   padding : 60px 0 60px;
+
+}
+
+}
+ul{
+    list-style-type: none;
+    font-size: larger;
+   
+}
+ul li{
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer-col-2 img{
+    display:flex;
+    padding-left: 110px;
+    justify-content: center;
+}
+ .copyright p{
+    display: flex;
+    padding-top: 8px;
+    justify-content: center;
+
+ }
