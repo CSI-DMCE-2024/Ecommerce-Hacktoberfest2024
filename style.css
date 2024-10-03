@@ -16,7 +16,33 @@ nav ul li{
     display: inline-block;
     list-style-type: none;
     margin-right: 20px;
+    position: relative
 }
+
+nav ul li a {
+    transition: color 0.5s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #E64A35;
+    width: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ac1400;
+}
+
 a {
     text-decoration: none;
     color: #555;
