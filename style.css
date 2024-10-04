@@ -90,9 +90,28 @@ P{
 .offer{
     background: radial-gradient(#fff,#ffd6d6);
     margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding:30px 0;
 }
-                                                                  /*need to be work on it*/
+#colspecial{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+}
+.band1{
+    font-size: 23px;
+}                                                               /*need to be work on it*/
+.band2{
+    font-size: 70px;
+    color: black;
+}                                                               /*need to be work on it*/
+.band3{
+    font-size: 14px;
+}                                                               /*need to be work on it*/
 .small-container1{
     display: flex;
     display: inline-block;
@@ -105,6 +124,11 @@ P{
 
 .offer .col2{
     display: inline-block;
+}
+.small-conatiner2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -149,8 +173,6 @@ filter: grayscale(100%);
     color: #555;
     font-size: 14px;
    padding : 60px 0 60px;
-
-}
 
 }
 ul{
