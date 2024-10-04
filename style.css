@@ -1,3 +1,8 @@
+/*enable smooth scrolling for entire page*/
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -141,6 +146,28 @@ filter: grayscale(100%);
 
 
 
+/*--------back to top button---------*/
+#backToTop {
+    display: none; /*hidden initially*/
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100; /*ensure it appears above other content*/
+    background-color: #D8FFFF; /*blue contrasting color*/
+    color: black;
+    border: none;
+    padding: 30px 30px;
+    font-size: 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s; /*smooth hover effect*/
+}
+
+#backToTop:hover {
+    background-color: #0056b3; /*darker blue on hover*/
+    transform: scale(1.1); /*scaling effect*/
+}
 
 /*-------footer-----*/
 
@@ -152,7 +179,7 @@ filter: grayscale(100%);
 
 }
 
-}
+
 ul{
     list-style-type: none;
     font-size: larger;
