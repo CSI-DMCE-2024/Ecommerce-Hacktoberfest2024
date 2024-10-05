@@ -1,4 +1,4 @@
-# Tourism Blog
+# Ecommerce
 
 ## Maintainers
 [Aditya Jambhale](https://github.com/Aditya-jambhale)
@@ -9,9 +9,9 @@ Explain how to install and set up your project locally. Include any prerequisite
 
 ```bash
 # Clone the repository
-git clone https://github.com/CSI-DMCE-2023/Tourism-Blog.git
+git clone https://github.com/CSI-DMCE-2024/Ecommerce-Hacktoberfest2024.git
 
 # Change directory
-cd Tourism-Blog
+cd Ecommerce-Hacktoberfest2024
 
 # Open index.html in your browser
