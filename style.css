@@ -1,6 +1,8 @@
 /*enable smooth scrolling for entire page*/
 html {
     scroll-behavior: smooth;
+    scroll-padding: 80px;
+
 }
 
 *{
@@ -12,6 +14,11 @@ html {
     display: flex;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    z-index: 1000px;
+    height: 80px;
+    top: 0px;
+    background-color: #FFFFFF;
 }
 nav{
     flex: 1;
@@ -92,12 +99,13 @@ P{
 
 /*----fetaured categories------*/
 .catagories{
-    margin: 70px 0;
+    width: 100%;
 }
 .col3{
    
-    min-width: 280px;
-    margin-bottom: 30px;
+    width: 280px;
+    height: 300px;
+    /* margin-bottom: 30px; */
 }
 .col3 img{
     width: 100%;
@@ -106,12 +114,11 @@ P{
 }
 
 .small-container{
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    max-width: 108px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+    flex-wrap: wrap;
 }
 
 /*-----offer section---*/

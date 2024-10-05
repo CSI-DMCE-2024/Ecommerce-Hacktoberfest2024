@@ -7,25 +7,27 @@
     <link rel="Stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
     <div class="navbar"> 
         <div class="logo">
             <img src="images/logo.png" alt="LOGO" width="125px">
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">PRODUCT</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">CONTACT</a></li>
-                        <li><a href="">ACCOUNT</a></li>
-                    </ul>
-                </nav>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#products">PRODUCT</a></li>
+                <li><a href="#topbrands">TRENDING NOW</a></li>
+                <li><a href="#companies">COMPANIES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div > 
+    <div class="container">
+       
 <!----head section-------->
 
 
-    </div class="head">
-    <div class="row">
+    
+    <div class="row" id="home">
         <div class="col2">
             <h1>
                 Give Your Workout<br> A New Style</h1>
@@ -39,7 +41,7 @@
 
 <!------featured categories-->
 
-<div class="catagories">
+<div class="catagories" id="products">
    
     <div class="small-container">
         <div class="col3">
@@ -56,19 +58,17 @@
     
 </div>
 <!----offers section------>
-<div class="offer">
-    <div class="small-conatiner2">
-        <div class="col2">                     <!---need to work on it-->
-<img src="images/exclusive.png"></div>
-        <div class="col2">
+<div class="offer" id="topbrands">
+    <div class="small-container2" style="display: flex;">
+        <div class="col2" style="flex: 1;">
+            <img src="images/exclusive.png" alt="Smart Band 4">
+        </div>
+        <div class="col2" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
             <p>Exclusively Available on Redstore</p>
-            <h1>
-                Smart Band-4
-            </h1>
+            <h1>Smart Band-4</h1>
             <small>
-                The Mi smart band 4 features a 39.9% larger , AMOLED color full-touch dispaly with adjustable brightness,so Everthing is clear as can be.
+                The Mi smart band 4 features a 39.9% larger, AMOLED color full-touch display with adjustable brightness, so everything is clear as can be.
             </small>
-
         </div>
     </div>
 </div>
@@ -76,7 +76,7 @@
 
 
 
-<div class="brands">
+<div class="brands" id="companies">
     
 <ul>
 <li><img src="images/logo-godrej.png"></li>
@@ -94,7 +94,7 @@
 
 <!-----------footer----------->
 
-<div class="footer">
+<div class="footer" id="contact">
     <div class="container">
         <div class="row">
         <div class="footer-col-1">
