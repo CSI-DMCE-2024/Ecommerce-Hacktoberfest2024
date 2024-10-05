@@ -228,8 +228,8 @@ filter: grayscale(100%);
       }
       
       .app-download img, .partner-logos img {
-        height:80px;
-        width: 200px;
+        height:70px;
+        width: 220px;
         margin-right: 10px;
       }
       
