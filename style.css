@@ -194,35 +194,105 @@ filter: grayscale(100%);
 }
 
 /*-------footer-----*/
+      
 
-.footer{
-    background-color: black;
-    color: #555;
-    font-size: 14px;
-   padding : 60px 0 60px;
+      body {
+        font-family: 'Arial', sans-serif;
+        color: #fff;
+      }
+      
+      footer {
+        background-color: #1e1e1e;
+        padding: 40px 0;
+      }
+      
 
-}
-
-
-ul{
-    list-style-type: none;
-    font-size: larger;
-   
-}
-ul li{
-    display: flex;
-    justify-content: center;
-}
-
-
-.footer-col-2 img{
-    display:flex;
-    padding-left: 110px;
-    justify-content: center;
-}
- .copyright p{
-    display: flex;
-    padding-top: 8px;
-    justify-content: center;
-
- }
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 60px;
+        padding: 0 80px;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    
+      .footer-container h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #f3c614; /* Highlighted heading color #f3c614 */
+      }
+      
+      .footer-container p {
+        font-size: 14px;
+        color: #cccccc;
+      }
+      
+      .app-download img, .partner-logos img {
+        height:80px;
+        width: 200px;
+        margin-right: 10px;
+      }
+      
+      .app-download p {
+        margin-top: 10px;
+        font-size: 12px;
+      }
+      
+      .partner-logos img {
+        width: 80px;
+      }
+      
+      .about p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #dddddd;
+      }
+      
+      .social ul, .links ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .social ul li, .links ul li {
+        margin-bottom: 10px;
+      }
+      
+      .social ul li a, .links ul li a {
+        color:#ffffff ;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      
+      .social ul li a:hover, .links ul li a:hover {
+        color: #ff7800;
+      }
+      
+      .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 10px;
+        border-top: 1px solid #555;
+      }
+      
+      .footer-bottom p {
+        font-size: 14px;
+        color: #777;
+      }
+      
+      /* Spacing and layout enhancements */
+      .footer-container div {
+        
+        padding: 0 10px;
+      }
+      
+      .app-links {
+        display: flex;
+        gap: 10px;
+      }
+      
+      .partner-logos {
+        display: flex;
+        gap: 10px;
+      }
+      
+     
