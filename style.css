@@ -1,228 +1,347 @@
-/*enable smooth scrolling for entire page*/
+/* Enable smooth scrolling for entire page */
 html {
     scroll-behavior: smooth;
 }
 
-*{
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.navbar{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-nav{
-    flex: 1;
-    text-align: right;
-}
-nav ul li{
-    display: inline-block;
-    list-style-type: none;
-    margin-right: 20px;
-    position: relative;
-}
-nav ul li a{
-    transition: color 0.5s ease;
-}
 
-nav ul li a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: #E64A35;
-    width: 0;
-    transition: width 0.3s ease;
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-nav ul li a:hover {
-    color: #ac1400;
-}
 a {
     text-decoration: none;
     color: #555;
 }
 
-.container{
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items to the left and right */
+    padding: 20px;
+    position: relative; /* For dropdown positioning */
+}
+
+nav {
+    flex: 1;
+    text-align: right; /* Align text to the right */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end; /* Align the menu to the right */
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    top: 100%; /* Position below the parent */
+    right: 0; /* Align the dropdown to the right */
+    background: white; /* Background for dropdown */
+    border: 1px solid #ccc; /* Border for dropdown */
+    z-index: 1000; /* Ensure it appears above other content */
+    width: 200px; /* Optional: Adjust the width */
+}
+
+.dropdown a {
+    display: block; /* Make links block level for easy clicking */
+    padding: 10px 20px; /* Padding for dropdown links */
+    color: #555; /* Color for dropdown links */
+    text-align: left; /* Align the text to the left (optional) */
+}
+
+.dropdown a:hover {
+    background: #E64A35; /* Background on hover */
+    color: white; /* Text color on hover */
+}
+
+
+
+    /* Dropdown Menu for Mobile */
+    nav ul li .dropdown {
+        display: none; /* Hide dropdown by default */
+        position: relative;
+        width: 100%;
+    }
+
+    nav ul li.active .dropdown {
+        display: block; /* Show dropdown when parent li is active */
+    }
+
+    .navbar .toggle-button {
+        display: block; /* Show toggle button */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    .toggle-button {
+        display: none; /* Hide toggle button by default */
+    }
+
+
+
+/* Container Styles */
+.container {
     max-width: 1300px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 0 25px;
     margin: auto;
 }
 
-/*------head section---*/
-
-.head{
+/* Head Section */
+.head {
     display: flex;
 }
-P{
+
+p {
     color: #555;
 }
 
-
-.row{
+/* Grid System */
+.row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.col2{
+
+.col2 {
     flex-basis: 50%;
     min-width: 300px;
+}
 
-}                                                                         /*Need to be work on it from zero*/
-.col2 img{
+.col2 img {
     max-width: 100%;
     padding: 50px 0;
-    align-items: flex-end;
 }
-.col2 h1{
+
+.col2 h1 {
     font-size: 50px;
     line-height: 40px;
     margin: 25px 0;
 }
 
-/*----fetaured categories------*/
-.catagories{
+/* Featured Categories */
+.categories {
     margin: 70px 0;
 }
-.col3{
-   
+
+.col3 {
     min-width: 280px;
     margin-bottom: 30px;
 }
-.col3 img{
+
+.col3 img {
     width: 100%;
-    padding:20px
-
+    padding: 20px;
 }
 
-.small-container{
-    display: flex;
-    justify-content: center;
-    max-width: 108px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-/*-----offer section---*/
-
-.offer{
-    background: radial-gradient(#fff,#ffd6d6);
+/* Offer Section */
+.offer {
+    background: radial-gradient(#fff, #ffd6d6);
     margin-top: 80px;
-    padding:30px 0;
+    padding: 30px 0;
 }
-                                                                  /*need to be work on it*/
-.small-container1{
+
+.small-container1 {
     display: flex;
-    display: inline-block;
-    width:108px;
+    width: 108px;
 }
-.small-container1 img{
+
+.small-container1 img {
     max-height: 100px;
-    width:30px;
+    width: 30px;
 }
 
-.offer .col2{
+.offer .col2 {
     display: inline-block;
 }
 
-
-
-/*----brands--------*/
-h2{
-text-align: center;
-text-decoration: underline;
-color: black;
-font-size: 30px;
+/* Brands Section */
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+    font-size: 30px;
 }
-.brands{
+
+.brands {
     display: flex;
-    padding-top: 10px;
     justify-content: center;
     margin-bottom: 15px;
 }
-.brands ul li{
-    display: inline-block;
 
+.brands ul {
+    display: flex;
 }
 
-.brands img{
-width: 100%;
-height: 60px;
-cursor: pointer;
-filter: grayscale(100%);
+.brands img {
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    filter: grayscale(100%);
 }
 
-.brands img:hover{
+.brands img:hover {
     filter: grayscale(0);
 }
 
-
-
-
-/*--------back to top button---------*/
+/* Back to Top Button */
 #backToTop {
-    display: none; /*hidden initially*/
+    display: none; /* Hidden initially */
     position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 100; /*ensure it appears above other content*/
-    background-color: #D8FFFF; /*blue contrasting color*/
+    z-index: 100; /* Ensure it appears above other content */
+    background-color: #D8FFFF; /* Button color */
     color: black;
     border: none;
-    padding: 30px 30px;
+    padding: 30px;
     font-size: 25px;
     border-radius: 50px;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s, transform 0.3s; /*smooth hover effect*/
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
 }
 
 #backToTop:hover {
-    background-color: #0056b3; /*darker blue on hover*/
-    transform: scale(1.1); /*scaling effect*/
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Scaling effect */
 }
 
-/*-------footer-----*/
-
-.footer{
+/* Footer Styles */
+.footer {
     background-color: black;
     color: #555;
     font-size: 14px;
-   padding : 60px 0 60px;
-
+    padding: 60px 0;
 }
 
-
-ul{
+ul {
     list-style-type: none;
     font-size: larger;
-   
 }
-ul li{
+
+ul li {
     display: flex;
     justify-content: center;
 }
 
-
-.footer-col-2 img{
-    display:flex;
+.footer-col-2 img {
+    display: flex;
     padding-left: 110px;
     justify-content: center;
 }
- .copyright p{
+
+.copyright p {
     display: flex;
     padding-top: 8px;
     justify-content: center;
+}
 
- }
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .col2, .col3 {
+        flex-basis: 100%; /* Stack columns */
+        min-width: auto; /* Reset min-width */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    nav {
+        text-align: left; /* Align text to the left */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Reduce margin */
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the original menu on small screens */
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    .navbar.active nav ul {
+        display: flex; /* Show the menu when activated */
+    }
+
+    .dropdown {
+        display: block; /* Show dropdown on hover or click */
+    }
+
+    .navbar .toggle-button {
+        display: block; /* Show toggle button */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    .toggle-button {
+        display: none; /* Hide toggle button by default */
+    }
+
+    .head {
+        flex-direction: column; /* Stack head elements */
+        align-items: center; /* Center align */
+    }
+
+    .col2 h1 {
+        font-size: 36px; /* Smaller heading */
+        line-height: 32px; /* Adjust line height */
+    }
+
+    .offer {
+        padding: 20px 0; /* Reduce padding */
+    }
+
+    .brands img {
+        height: 50px; /* Reduce brand image size */
+    }
+
+    #backToTop {
+        padding: 15px; /* Adjust padding */
+        font-size: 20px; /* Smaller font */
+    }
+
+    .footer {
+        padding: 40px 0; /* Adjust footer padding */
+    }
+
+    .footer-col-2 img {
+        padding-left: 30px; /* Adjust padding for footer image */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin-right: 5px; /* Further reduce margin */
+    }
+
+    .col2 img {
+        padding: 20px 0; /* Reduce padding around images */
+    }
+
+    .small-container {
+        padding-left: 15px; /* Reduce padding */
+        padding-right: 15px; /* Reduce padding */
+    }
+
+    h2 {
+        font-size: 24px; /* Smaller heading */
+    }
+}

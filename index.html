@@ -8,136 +8,121 @@
 </head>
 <body>
     <div class="container">
-    <div class="navbar"> 
-        <div class="logo">
-            <img src="images/logo.png" alt="LOGO" width="125px">
+        <div class="navbar"> 
+            <div class="toggle-button" onclick="toggleMenu()">☰</div>
+            <div class="logo">
+                <img src="images/logo.png" alt="LOGO" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">PRODUCT</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">ACCOUNT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!----head section-------->
+        <div class="head">
+            <div class="row">
+                <div class="col2">
+                    <h1>Give Your Workout<br> A New Style</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente necessitatibus iste ipsam<br> debitis magni quasi minus architecto!</p>
+                    <div class="col2">
+                        <img src="images/image1.png" alt="Image">
+                    </div>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">PRODUCT</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">CONTACT</a></li>
-                        <li><a href="">ACCOUNT</a></li>
-                    </ul>
-                </nav>
-<!----head section-------->
+            </div>
+        </div>
+    </div>
 
+    <!------featured categories-->
+    <div class="categories">
+        <div class="small-container">
+            <div class="col3">
+                <img src="images/category-1.jpg">
+            </div>
+            <div class="col3">
+                <img src="images/category-2.jpg">
+            </div>
+            <div class="col3">
+                <img src="images/category-3.jpg">
+            </div>
+        </div>
+    </div>
 
-    </div class="head">
-    <div class="row">
-        <div class="col2">
-            <h1>
-                Give Your Workout<br> A New Style</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente necessitatibus iste ipsam<br> debitis magni quasi minus architecto!  </p>
+    <!----offers section------>
+    <div class="offer">
+        <div class="small-container2">
             <div class="col2">
-<img src="images/image1.png" alt="Image">
+                <img src="images/exclusive.png">
+            </div>
+            <div class="col2">
+                <p>Exclusively Available on Redstore</p>
+                <h1>Smart Band-4</h1>
+                <small>The Mi smart band 4 features a 39.9% larger AMOLED color full-touch display with adjustable brightness, so everything is clear as can be.</small>
             </div>
         </div>
     </div>
-</div>
 
-<!------featured categories-->
-
-<div class="catagories">
-   
-    <div class="small-container">
-        <div class="col3">
-            <img src="images/category-1.jpg">
-        </div>
-        <div class="col3">
-            <img src="images/category-2.jpg">
-
-        </div>
-        <div class="col3">
-            <img src="images/category-3.jpg">
-        </div>
+    <!-- Brands section -->
+    <div class="brands">
+        <ul>
+            <li><img src="images/logo-godrej.png"></li>
+            <li><img src="images/logo-coca-cola.png"></li>
+            <li><img src="images/logo-oppo.png"></li>
+            <li><img src="images/logo-paypal.png"></li>
+            <li><img src="images/logo-philips.png"></li>
+        </ul>
     </div>
-    
-</div>
-<!----offers section------>
-<div class="offer">
-    <div class="small-conatiner2">
-        <div class="col2">                     <!---need to work on it-->
-<img src="images/exclusive.png"></div>
-        <div class="col2">
-            <p>Exclusively Available on Redstore</p>
-            <h1>
-                Smart Band-4
-            </h1>
-            <small>
-                The Mi smart band 4 features a 39.9% larger , AMOLED color full-touch dispaly with adjustable brightness,so Everthing is clear as can be.
-            </small>
 
-        </div>
-    </div>
-</div>
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()">Top</button>
 
-
-
-
-<div class="brands">
-    
-<ul>
-<li><img src="images/logo-godrej.png"></li>
-<li><img src="images/logo-coca-cola.png"></li>
-<li><img src="images/logo-oppo.png"></li>
-<li><img src="images/logo-paypal.png"></li>
-<li><img src="images/logo-philips.png"></li>
-</ul>
-</div>
-
-
-<!-- Back to Top Button -->
-<button id="backToTop" onclick="scrollToTop()">Top</button>
-
-
-<!-----------footer----------->
-
-<div class="footer">
-    <div class="container">
-        <div class="row">
-        <div class="footer-col-1">
-            <h3>
-                Download Our App
-            </h3>
-            <div class="app">
-                <img src="images/app-store.png">
-                <img src="images/play-store.png">
-                
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <div class="app">
+                        <img src="images/app-store.png">
+                        <img src="images/play-store.png">
+                    </div>
+                    <p>Download App for Android and iOS mobile phone.</p>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our Purpose is to sustainably make the pleasure and benefits of sports accessible to many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affairs</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Threads</li>
+                    </ul>
+                </div>
             </div>
-            <p>Download App for Android and ios mobile phone.</p>
-</div>
-<div class="footer-col-2">
-    <img src="images/logo-white.png">
-    <p>Our Purpose is to sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+        </div>
+        <hr>
+        <div class="copyright">
+            <p>&copy; 2014 All Rights Reserved</p>
+        </div>
     </div>
-    <div class="footer-col-3">
-        <h3>USeful Links </h3>
-      <ul>
-        <li>Coupons</li>
-        <li>Blog post</li>
-        <li>Return Policy</li>
-        <li>Join Affairs</li>
-      </ul>
-         </div>
-         <div class="footer-col-4">
-            <h3>Follow US  </h3>
-      <ul>
-        <li>Facebook</li>
-        <li>Twitter</li>
-        <li>Instagram</li>
-        <li>Threads</li>
-      </ul>
-         </div>
 
-       
-    </div><br>
-<hr>    </div>
-<div class="copyright"><p>copyright@2014 rights reserved</p></div>
-
-<script src="script.js"></script>
-
-</div>
+    <script src="script.js"></script>
 </body>
 </html>
