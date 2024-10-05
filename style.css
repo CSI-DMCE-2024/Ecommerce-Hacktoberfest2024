@@ -243,6 +243,7 @@ filter: grayscale(100%);
       }
       
       .about p {
+        text-align:center;
         font-size: 14px;
         line-height: 1.5;
         color: #dddddd;
@@ -280,10 +281,10 @@ filter: grayscale(100%);
       }
       
       /* Spacing and layout enhancements */
-      .footer-container div {
+      /* .footer-container div {
         
         padding: 0 10px;
-      }
+      } */
       
       .app-links {
         display: flex;
