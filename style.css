@@ -21,6 +21,14 @@ a {
     align-items: center;
     padding: 20px;
     position: relative; /* For dropdown positioning */
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar:hover{
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
 }
 
 nav {
@@ -39,14 +47,30 @@ nav ul li {
 }
 
 nav ul li a {
-    transition: color 0.5s ease;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: color 0.5s ease, background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: rgba(255, 255, 255, 0.1); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a:hover{
+    color: #fff;
+    background-color: #E64A35;
+    box-shadow: o 6px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul li a::after {
     content: '';
     display: block;
-    height: 2px;
-    background: #E64A35;
+    height: 3px;
+    background: #fff;
     width: 0;
     transition: width 0.3s ease;
     position: absolute;
@@ -58,8 +82,20 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-nav ul li a:hover {
-    color: #ac1400;
+/* Navbar Toggle Button */
+.toggle-button {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.toggle-button:hover {
+    color: #E64A35; /* Change icon color on hover */
 }
 
 /* Dropdown Menu Styles */
@@ -81,6 +117,18 @@ nav ul li:hover .dropdown {
     nav ul {
         display: none; /* Hide the original menu on small screens */
         flex-direction: column; /* Stack menu items vertically */
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Positioned below the navbar */
+        right: 0;
+        border-top: 1px solid #ccc;
+        padding: 20px 0;
+        transition: max-height 0.3s ease;
+    }
+
+    nav ul li{
+        margin: 10px 0;
     }
 
     .navbar.active nav ul {
@@ -98,15 +146,20 @@ nav ul li:hover .dropdown {
         display: block; /* Show dropdown when parent li is active */
     }
 
-    .navbar .toggle-button {
-        display: block; /* Show toggle button */
-        cursor: pointer; /* Change cursor to pointer */
+
+    .navbar.active.toggle-button{
+        color: #E64A35;
+    }
+
+    .navbar.active nav ul {
+        display: flex;
     }
 
     .toggle-button {
-        display: none; /* Hide toggle button by default */
+        display: block; /* Hide toggle button by default */
     }
 }
+
 
 
 /* Container Styles */
