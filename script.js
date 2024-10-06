@@ -1,6 +1,6 @@
 let backToTopButton = document.getElementById("backToTop");
 
-/*show the button after scrolling down 300 pixel*/
+/* Show the button after scrolling down 300 pixels */
 window.onscroll = function() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         backToTopButton.style.display = "block";
@@ -9,7 +9,7 @@ window.onscroll = function() {
     }
 };
 
-/*smooth scrolling to the top when the button is clicked*/
+/* Smooth scrolling to the top when the button is clicked */
 backToTopButton.onclick = function() {
     window.scrollTo({
         top: 0,
@@ -21,5 +21,3 @@ function toggleMenu() {
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('active'); // Toggle the active class
 };
-
-
