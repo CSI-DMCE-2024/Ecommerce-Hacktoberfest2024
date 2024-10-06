@@ -4,42 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce Website</title>
-    <link rel="Stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="navbar"> 
-            <div class="toggle-button" onclick="toggleMenu()">☰</div>
             <div class="logo">
                 <img src="images/logo.png" alt="LOGO" width="125px">
             </div>
-            <nav>
+            <!-- <div class="toggle-button" onclick="toggleMenu()">☰</div> -->
+            <nav class="nav-links">
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">PRODUCT</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">CONTACT</a></li>
-                    <li><a href="">ACCOUNT</a></li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#categories">PRODUCT</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#about">CONTACT</a></li>
+                    <li><a href="#about">ACCOUNT</a></li>
                 </ul>
             </nav>
         </div>
 
         <!----head section-------->
-        <div class="head">
+        <div class="head" id="home">
             <div class="row">
                 <div class="col2">
                     <h1>Give Your Workout<br> A New Style</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente necessitatibus iste ipsam<br> debitis magni quasi minus architecto!</p>
-                    <div class="col2">
-                        <img src="images/image1.png" alt="Image">
-                    </div>
+                </div>
+                <div class="col2">
+                    <img src="images/image1.png" alt="Image">
                 </div>
             </div>
         </div>
     </div>
 
     <!------featured categories-->
-    <div class="categories">
+    <div class="categories" id="categories">
         <div class="small-container">
             <div class="col3">
                 <img src="images/category-1.jpg">
@@ -82,7 +82,7 @@
     <button id="backToTop" onclick="scrollToTop()">Top</button>
 
     <!-- Footer -->
-    <div class="footer">
+    <div class="footer" id="about">
         <div class="container">
             <div class="row">
                 <div class="footer-col-1">

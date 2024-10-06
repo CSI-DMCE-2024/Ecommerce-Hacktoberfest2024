@@ -15,22 +15,39 @@ a {
     color: #555;
 }
 
+/* Global Image Styles */
+img {
+    max-width: 100%;      /* Ensures images never exceed the width of their container */
+    height: auto;         /* Maintains the aspect ratio */
+    display: block;       /* Removes inline spacing for images */
+}
+
 /* Navbar Styles */
 .navbar {
     display: flex;
     align-items: center;
     padding: 20px;
-    position: relative; /* For dropdown positioning */
+    position: fixed;
+    top:0;
+    width: 100%; 
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+}
+
+.logo {
+    flex: 0 0 auto; /* Prevent logo from growing */
 }
 
 nav {
-    flex: 1;
-    text-align: right;
+    flex: 1; /* Allow nav to take the remaining space */
+    text-align: right; /* Align text to the right */
 }
 
 nav ul {
     display: flex;
     list-style-type: none;
+    justify-content: flex-end; /* Ensure items are on the right */
 }
 
 nav ul li {
@@ -40,7 +57,9 @@ nav ul li {
 
 nav ul li a {
     transition: color 0.5s ease;
+    font-weight: bold;
 }
+
 
 nav ul li a::after {
     content: '';
@@ -62,6 +81,7 @@ nav ul li a:hover {
     color: #ac1400;
 }
 
+
 /* Dropdown Menu Styles */
 .dropdown {
     display: none; /* Hide dropdown by default */
@@ -77,52 +97,38 @@ nav ul li:hover .dropdown {
     display: block; /* Show dropdown on hover in desktop view */
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide the original menu on small screens */
-        flex-direction: column; /* Stack menu items vertically */
-    }
-
-    .navbar.active nav ul {
-        display: flex; /* Show the menu when activated */
-    }
-
-    /* Dropdown Menu for Mobile */
-    nav ul li .dropdown {
-        display: none; /* Hide dropdown by default */
-        position: relative;
-        width: 100%;
-    }
-
-    nav ul li.active .dropdown {
-        display: block; /* Show dropdown when parent li is active */
-    }
-
-    .navbar .toggle-button {
-        display: block; /* Show toggle button */
-        cursor: pointer; /* Change cursor to pointer */
-    }
-
-    .toggle-button {
-        display: none; /* Hide toggle button by default */
-    }
-}
-
-
 /* Container Styles */
 .container {
-    max-width: 1300px;
-    padding: 0 25px;
+    max-width: auto;
+    padding: auto;
     margin: auto;
 }
 
 /* Head Section */
 .head {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px 0;
 }
 
-p {
+.head h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+.head p {
     color: #555;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.head .col2 img {
+    padding: 50px 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: scale-down;  /* Ensures no trimming and scales down to fit within container */
 }
 
 /* Grid System */
@@ -134,19 +140,23 @@ p {
 }
 
 .col2 {
-    flex-basis: 50%;
+    flex: 1 1 50%;
     min-width: 300px;
+    padding: 10px;
 }
 
-.col2 img {
-    max-width: 100%;
-    padding: 50px 0;
+.col3 {
+    flex: 1 1 30%;
+    min-width: 280px;
+    margin-bottom: 30px;
 }
 
-.col2 h1 {
-    font-size: 50px;
-    line-height: 40px;
-    margin: 25px 0;
+.col3 img {
+    padding: 20px;
+    width: 100%;
+    height: auto;        /* Keeps height auto to avoid cropping */
+    object-fit: scale-down;  /* Ensures the entire image is visible without trimming */
+    border-radius: 8px;     /* Optional: Rounded corners for better aesthetics */
 }
 
 /* Featured Categories */
@@ -154,35 +164,53 @@ p {
     margin: 70px 0;
 }
 
-.col3 {
-    min-width: 280px;
-    margin-bottom: 30px;
-}
-
-.col3 img {
-    width: 100%;
-    padding: 20px;
+.categories .small-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* Offer Section */
 .offer {
-    background: radial-gradient(#fff, #ffd6d6);
+    background: radial-gradient(circle at center, #fff, #ffd6d6);
     margin-top: 80px;
-    padding: 30px 0;
+    padding: 60px 0;
 }
 
-.small-container1 {
+.offer .small-container2 {
     display: flex;
-    width: 108px;
-}
-
-.small-container1 img {
-    max-height: 100px;
-    width: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .offer .col2 {
-    display: inline-block;
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.offer .col2 img {
+    max-width: 100%;
+    height: auto;
+    object-fit: scale-down;  /* Ensures the entire image is visible without trimming */
+    padding: 20px 0;
+}
+
+.offer .col2 p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.offer .col2 h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.offer .col2 small {
+    font-size: 16px;
+    color: #777;
 }
 
 /* Brands Section */
@@ -191,23 +219,34 @@ h2 {
     text-decoration: underline;
     color: black;
     font-size: 30px;
+    margin-bottom: 40px;
 }
 
 .brands {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .brands ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.brands ul li {
+    margin: 10px 20px;
 }
 
 .brands img {
-    width: 100%;
-    height: 60px;
-    cursor: pointer;
+    width: 150px;
+    height: auto;
+    object-fit: scale-down; /* Ensures no trimming */
     filter: grayscale(100%);
+    transition: filter 0.3s ease;
 }
 
 .brands img:hover {
@@ -224,8 +263,8 @@ h2 {
     background-color: #D8FFFF; /* Button color */
     color: black;
     border: none;
-    padding: 30px;
-    font-size: 25px;
+    padding: 15px 20px;
+    font-size: 20px;
     border-radius: 50px;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -239,35 +278,83 @@ h2 {
 
 /* Footer Styles */
 .footer {
-    background-color: black;
-    color: #555;
+    background-color: #000;
+    color: #fff;
     font-size: 14px;
     padding: 60px 0;
 }
 
-ul {
-    list-style-type: none;
-    font-size: larger;
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-ul li {
+.footer .row {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+.footer-col-1 h3,
+.footer-col-3 h3,
+.footer-col-4 h3 {
+    margin-bottom: 20px;
+}
+
+.footer-col-1 .app img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .footer-col-2 img {
-    display: flex;
-    padding-left: 110px;
-    justify-content: center;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.copyright p {
-    display: flex;
-    padding-top: 8px;
-    justify-content: center;
+.footer-col-2 p {
+    color: #ccc;
+    font-size: 16px;
+}
+
+.footer-col-3 ul,
+.footer-col-4 ul {
+    list-style-type: none;
+}
+
+.footer-col-3 ul li,
+.footer-col-4 ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-col-3 ul li:hover,
+.footer-col-4 ul li:hover {
+    color: #E64A35;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
 }
 
 /* Responsive Styles */
+
+/* Tablets and Small Desktops */
 @media (max-width: 1200px) {
     .container {
         padding-left: 15px;
@@ -275,7 +362,7 @@ ul li {
     }
 
     .col2, .col3 {
-        flex-basis: 100%; /* Stack columns */
+        flex: 1 1 100%; /* Stack columns */
         min-width: auto; /* Reset min-width */
     }
 
@@ -286,83 +373,53 @@ ul li {
 
     nav {
         text-align: left; /* Align text to the left */
+        width: 100%;
     }
 
-    nav ul li {
-        margin-right: 10px; /* Reduce margin */
-    }
 }
 
+.footer-col-3 ul li:hover,
+.footer-col-4 ul li:hover {
+    color: #E64A35; /* Change color on hover */
+}
+
+/* Footer copyright */
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #111; /* Darker background for copyright */
+}
+
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide the original menu on small screens */
-        flex-direction: column; /* Stack menu items vertically */
-    }
-
-    .navbar.active nav ul {
-        display: flex; /* Show the menu when activated */
-    }
-
-    .dropdown {
-        display: block; /* Show dropdown on hover or click */
-    }
-
-    .navbar .toggle-button {
-        display: block; /* Show toggle button */
-        cursor: pointer; /* Change cursor to pointer */
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
     }
 
     .toggle-button {
-        display: none; /* Hide toggle button by default */
+        display: block; /* Show toggle button */
     }
 
-    .head {
-        flex-direction: column; /* Stack head elements */
-        align-items: center; /* Center align */
+    nav ul {
+        flex-direction: row; /* Stack nav items vertically */
+        display: none; /* Hide nav by default */
     }
 
-    .col2 h1 {
-        font-size: 36px; /* Smaller heading */
-        line-height: 32px; /* Adjust line height */
+    nav ul.active {
+        display: flex; /* Show nav when active */
     }
 
-    .offer {
-        padding: 20px 0; /* Reduce padding */
+    .col2 {
+        flex: 1 1 100%; /* Full width for small screens */
     }
 
-    .brands img {
-        height: 50px; /* Reduce brand image size */
+    .col3 {
+        flex: 1 1 100%; /* Full width for small screens */
+        margin-bottom: 20px; /* Space between items */
     }
 
     #backToTop {
-        padding: 15px; /* Adjust padding */
-        font-size: 20px; /* Smaller font */
-    }
-
-    .footer {
-        padding: 40px 0; /* Adjust footer padding */
-    }
-
-    .footer-col-2 img {
-        padding-left: 30px; /* Adjust padding for footer image */
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul li {
-        margin-right: 5px; /* Further reduce margin */
-    }
-
-    .col2 img {
-        padding: 20px 0; /* Reduce padding around images */
-    }
-
-    .small-container {
-        padding-left: 15px; /* Reduce padding */
-        padding-right: 15px; /* Reduce padding */
-    }
-
-    h2 {
-        font-size: 24px; /* Smaller heading */
+        right: 15px; /* Adjust position */
+        bottom: 15px; /* Adjust position */
     }
 }
