@@ -1,4 +1,7 @@
 let backToTopButton = document.getElementById("backToTop");
+let openMenuBtn = document.getElementById("openMenuBtn")
+let closeMenuBtn = document.getElementById("closeMenuBtn")
+let mobileNav = document.getElementById("mobileNav")
 
 /*show the button after scrolling down 300 pixel*/
 window.onscroll = function() {
@@ -17,9 +20,13 @@ backToTopButton.onclick = function() {
     });
 };
 
-function toggleMenu() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active'); // Toggle the active class
-};
 
+// Open Mobile Nav
+openMenuBtn.addEventListener("click", function () {
+    mobileNav.style.width = "100%";
+});
 
+// Close Mobile Nav
+closeMenuBtn.addEventListener("click", function () {
+    mobileNav.style.width = "0";
+});
