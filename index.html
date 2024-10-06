@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce Website</title>
-    <link rel="Stylesheet" href="style.css">
+    <link rel="Stylesheet" href="./style.css">
 </head>
 <body>
     <div class="container">
         <div class="navbar"> 
-            <div class="toggle-button" onclick="toggleMenu()">☰</div>
             <div class="logo">
                 <img src="images/logo.png" alt="LOGO" width="125px">
             </div>
@@ -22,7 +21,23 @@
                     <li><a href="">ACCOUNT</a></li>
                 </ul>
             </nav>
+            <div id="openMenuBtn" class="toggle-button" >
+                <img src="images/menu.png" alt="" width="22px" >
+            </div>
         </div>
+
+        <!-- Mobile navigation  -->
+        <div id="mobileNav" class="mobile-nav">
+            <button id="closeMenuBtn" class="close-btn">&times;</button>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">PRODUCT</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">CONTACT</a></li>
+                <li><a href="">ACCOUNT</a></li>
+            </ul>
+        </div>
+         
 
         <!----head section-------->
         <div class="head">
