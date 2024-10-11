@@ -3,128 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce Website</title>
-    <link rel="Stylesheet" href="/CSS/style.css">
+    <title>spotify clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="navbar"> 
-            <div class="toggle-button-and-logo">
-                <div class="toggle-button" onclick="toggleMenu()">☰</div>
-                <div class="logo">
-                    <img src="images/logo.png" alt="LOGO" width="125px">
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/products.html">PRODUCT</a></li>
-                    <li><a href="/About.html">ABOUT</a></li>
-                    <li><a href="/Contactus.html">CONTACT</a></li>
-                    <li><a href="/Account.html">ACCOUNT</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <!----head section-------->
-        <div class="head">
-            <div class="row">
-                <div class="col2">
-                    <h1>Give Your Workout<br> A New Style</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente necessitatibus iste ipsam<br> debitis magni quasi minus architecto!</p>
-                    <div class="col2">
-                        <img src="images/image1.png" alt="Image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!------featured categories-->
-    <div class="categories">
-        <div class="small-container">
-            <div class="col3">
-                <img src="images/category-1.jpg">
-            </div>
-            <div class="col3">
-                <img src="images/category-2.jpg">
-            </div>
-            <div class="col3">
-                <img src="images/category-3.jpg">
-            </div>
-        </div>
-    </div>
-
-    <!----offers section------>
-    <div class="offer">
-        <div class="small-container2">
-            <div class="col2">
-                <img src="images/exclusive.png">
-            </div>
-            <div class="col2">
-                <p>Exclusively Available on Redstore</p>
-                <h1>Smart Band-4</h1>
-                <small>The Mi smart band 4 features a 39.9% larger AMOLED color full-touch display with adjustable brightness, so everything is clear as can be.</small>
-            </div>
-        </div>
-    </div>
-
-    <!-- Brands section -->
-    <div class="brands">
+    <nav>
         <ul>
-            <li><img src="images/logo-godrej.png"></li>
-            <li><img src="images/logo-coca-cola.png"></li>
-            <li><img src="images/logo-oppo.png"></li>
-            <li><img src="images/logo-paypal.png"></li>
-            <li><img src="images/logo-philips.png"></li>
+            <li class="brand"><img src="spotify symbol.png" alt=""></li>
+            <li>Home</li>
+            <li>About Us</li>
         </ul>
-    </div>
+    </nav>
+    <div class="container">
+        <h1>Best of NCS- No Copyright Sounds</h1>
+        <div class="songList">
+            <div class="songItem-container">
+                <div class="songItem">
+                    <img src="music bg.jpg" alt="1">
+                    <span class="songName">Love is in the air</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:34</span>
+                        <i id="0" class="songItemplay fa fa-play-circle" aria-hidden="true"></i>
+                    </span>
+                </div>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" onclick="scrollToTop()">Top</button>
+                <div class="songItem">
+                    <img src="music bg.jpg" alt="1">
+                    <span class="songName">Love is in the air</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:34</span>
+                        <i id="1" class="songItemplay fa fa-play-circle" aria-hidden="true"></i>
+                    </span>
+                </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
-                    <h3>Download Our App</h3>
-                    <div class="app">
-                        <img src="images/app-store.png">
-                        <img src="images/play-store.png">
-                    </div>
-                    <p>Download App for Android and iOS mobile phone.</p>
+                <div class="songItem">
+                    <img src="music bg.jpg" alt="1">
+                    <span class="songName">Love is in the air</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:34</span>
+                        <i id="2" class="songItemplay fa fa-play-circle" aria-hidden="true"></i>
+                    </span>
                 </div>
-                <div class="footer-col-2">
-                    <img src="images/logo-white.png">
-                    <p>Our Purpose is to sustainably make the pleasure and benefits of sports accessible to many.</p>
+
+                <div class="songItem">
+                    <img src="music bg.jpg" alt="1">
+                    <span class="songName">Love is in the air</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:34</span>
+                        <i id="3" class="songItemplay fa fa-play-circle" aria-hidden="true"></i>
+                    </span>
                 </div>
-                <div class="footer-col-3">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li>Coupons</li>
-                        <li>Blog Post</li>
-                        <li>Return Policy</li>
-                        <li>Join Affairs</li>
-                    </ul>
+
+                <div class="songItem">
+                    <img src="music bg.jpg" alt="1">
+                    <span class="songName">Love is in the air</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:34</span>
+                        <i id="4" class="songItemplay fa fa-play-circle" aria-hidden="true"></i>
+                    </span>
                 </div>
-                <div class="footer-col-4">
-                    <h3>Follow Us</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
-                        <li>Threads</li>
-                    </ul>
+
+                <div class="songItem">
+                    <img src="music bg.jpg" alt="1">
+                    <span class="songName">Love is in the air</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:34</span> 
+                        <i id="5" class="songItemplay fa fa-play-circle" aria-hidden="true"></i>
+                    </span>
                 </div>
+
+
             </div>
         </div>
-        <hr>
-        <div class="copyright">
-            <p>&copy; 2014 All Rights Reserved</p>
+        <div class="songBanner"></div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" max="100">
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fa fa-step-backward" aria-hidden="true" id="previous"></i>
+            <i class="fa fa-play-circle" aria-hidden="true" "masterplay"></i>
+            <i class="fa fa-step-forward" aria-hidden="true" id="next"></i>
+        </div>
+        <div class="songInfo">
+            <img src="gif1.gif" alt="" width="22px" id="gif" > <span id="masterSongName">salam-e-Ishq</span>this is my fav song
         </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="first.js"></script>
+    
 </body>
 </html>
