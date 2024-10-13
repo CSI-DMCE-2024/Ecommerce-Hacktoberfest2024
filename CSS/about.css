@@ -1,0 +1,40 @@
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav {
+  float: right;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.content {
+  padding: 50px 0;
+}
+h1 {
+  color: #333;
+  font-size: 36px;
+}
+p {
+  color: #666;
+  line-height: 1.6;
+}
+.team {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.team-member {
+  text-align: center;
+  width: 30%;
+}
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
