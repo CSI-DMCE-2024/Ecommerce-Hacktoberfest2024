@@ -216,18 +216,13 @@ p {
 }
 
 /* Featured Categories */
-.categories {
-    margin: 70px 0;
-}
-
-.col3 {
-    min-width: 280px;
-    margin-bottom: 30px;
-}
-
-.col3 img {
-    width: 100%;
-    padding: 20px;
+.responsive-image {
+    max-width: 80%;
+    max-height: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    padding: 25px;
 }
 
 /* Offer Section */
@@ -247,9 +242,20 @@ p {
     width: 30px;
 }
 
-.offer .col2 {
-    display: inline-block;
+.offer .col2 img {
+    max-width: 350px; /* Adjust the value as needed */
+    max-height: 350px; /* Adjust the value as needed */
 }
+
+.offer {
+    text-align: center;
+}
+
+.offer .col2 img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* Brands Section */
 h2 {
