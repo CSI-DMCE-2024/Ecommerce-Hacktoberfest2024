@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('your-background-image.jpg'); /* Replace with your desired background */
+    background-size: cover;
+    padding: 120px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: linear-gradient(to top right, #6bf074, #6be9f0);
+}
+
+#login-form, #logout-form {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2ef33b;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00f2ff;
+}
+
+button {
+    margin-top: 10px;
+    margin-right: 10px; 
+    
+}
+
+input[type="text"], input[type="password"] {
+    width: 200px; 
+    margin-bottom: 10px; 
+    
+}
+
+#logout-button {
+    margin-left: 30px; 
+}
+
+
+/* Add styling for the forgot password link */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-image: linear-gradient(to right, #6bf0d1, #3a5aea);
+    
+}
+
+.back-to-home-button {
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.back-to-home-button a {
+    text-decoration: none;
+    color: #333;
+}
+
