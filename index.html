@@ -4,176 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce Website</title>
-    <link rel="Stylesheet" href="/CSS/style.css">
-    <style>
-        html{
-            scroll-behavior: smooth;
-        }
-        .responsive-image{
-            max-width: 100%;
-            height: auto;
-        }
-        </style>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="navbar"> 
-            <div class="toggle-button-and-logo">
-                <div class="toggle-button" onclick="toggleMenu()">☰</div>
-                <div class="logo">
-                    <img src="images/logo.png" alt="LOGO" width="125px">
-                </div>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Company Logo" width="125">
             </div>
             <nav>
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#product">PRODUCT</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#account">ACCOUNT</a></li>
+                <button class="toggle-button" aria-label="Toggle Menu">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#account">Account</a></li>
                 </ul>
             </nav>
         </div>
+    </header>
 
-        <!----head section-------->
-        <div class="head" id="home">
-            <div class="row">
-                <div class="col2">
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
                     <h1>Give Your Workout<br> A New Style</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente necessitatibus iste ipsam<br> debitis magni quasi minus architecto!</p>
-                    <div class="col2">
-                        <img src="images/image1.png" alt="Image">
+                    <p>Discover the perfect blend of comfort and style for your fitness journey. Elevate your workout experience with our cutting-edge athletic wear.</p>
+                    <a href="#products" class="btn">Shop Now</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/image1.png" alt="Athlete wearing our product" class="responsive-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="categories">
+            <div class="container">
+                <h2>Featured Categories</h2>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="images/category-1.jpg" alt="Running Shoes" class="responsive-image">
+                        <h3>Running Shoes</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/category-2.jpg" alt="Workout Apparel" class="responsive-image">
+                        <h3>Workout Apparel</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/category-3.jpg" alt="Fitness Accessories" class="responsive-image">
+                        <h3>Fitness Accessories</h3>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!------featured categories-->
-    <div class="categories" id="products">
-        <div class="small-container">
-            <div class="col3">
-                <img src="images/category-1.jpg" alt="Category 1" class="responsive-image">
+        <section id="about" class="offer">
+            <div class="container">
+                <div class="offer-content">
+                    <h2>Exclusive Offer</h2>
+                    <h3>Smart Band 4</h3>
+                    <p>Experience the future of fitness tracking with the Mi Smart Band 4. Featuring a 39.9% larger AMOLED color full-touch display with adjustable brightness, this device brings clarity to every aspect of your health journey.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="offer-image">
+                    <img src="images/exclusive.png" alt="Smart Band 4" class="responsive-image">
+                </div>
             </div>
-            <div class="col3">
-                <img src="images/category-2.jpg" alt="Category 2" class="responsive-image">
-            </div>
-            <div class="col3">
-                <img src="images/category-3.jpg" alt="Category 3" class="responsive-image">
-            </div>
-        </div>
-    </div>
-    
-     
-    <!----offers section------>
-    <div class="offer" id="about">
-        <div class="small-container2">
-            <div class="col2">
-                <img src="images/exclusive.png">
-            </div>
-            <div class="col2">
-                <p>Exclusively Available on Redstore</p>
-                <h1>Smart Band-4</h1>
-                <small>The Mi smart band 4 features a 39.9% larger AMOLED color full-touch display with adjustable brightness, so everything is clear as can be.</small>
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Brands section -->
-    <div class="brands" id="contact">
-        <ul>
-            <li><img src="images/logo-godrej.png"></li>
-            <li><img src="images/logo-coca-cola.png"></li>
-            <li><img src="images/logo-oppo.png"></li>
-            <li><img src="images/logo-paypal.png"></li>
-            <li><img src="images/logo-philips.png"></li>
-        </ul>
-    </div>
+        <section id="contact" class="brands">
+            <div class="container">
+                <h2>Our Partners</h2>
+                <div class="brand-grid">
+                    <img src="images/logo-godrej.png" alt="Godrej" class="responsive-image">
+                    <img src="images/logo-coca-cola.png" alt="Coca-Cola" class="responsive-image">
+                    <img src="images/logo-oppo.png" alt="Oppo" class="responsive-image">
+                    <img src="images/logo-paypal.png" alt="PayPal" class="responsive-image">
+                    <img src="images/logo-philips.png" alt="Philips" class="responsive-image">
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" onclick="scrollToTop()">Top</button>
-
-    <!-- Footer -->
-
-    <div class="footer" id="account">
+    <footer id="account" class="footer">
         <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
+            <div class="footer-grid">
+                <div class="footer-col">
                     <h3>Download Our App</h3>
-                    <div class="app">
-                        <img src="images/app-store.png">
-                        <img src="images/play-store.png">
+                    <div class="app-links">
+                        <a href="#"><img src="images/app-store.png" alt="Download on the App Store"></a>
+                        <a href="#"><img src="images/play-store.png" alt="Get it on Google Play"></a>
                     </div>
-                    <p>Download App for Android and iOS mobile phone.</p>
+                    <p>Get our app for Android and iOS devices.</p>
                 </div>
-                <div class="footer-col-2">
-                    <img src="images/logo-white.png">
-                    <p>Our Purpose is to sustainably make the pleasure and benefits of sports accessible to many.</p>
+                <div class="footer-col">
+                    <img src="images/logo-white.png" alt="Company Logo" class="footer-logo">
+                    <p>Our mission is to make sports enjoyable and accessible for everyone, sustainably.</p>
                 </div>
-                <div class="footer-col-3">
+                <div class="footer-col">
                     <h3>Useful Links</h3>
                     <ul>
-                        <li>Coupons</li>
-                        <li>Blog Post</li>
-                        <li>Return Policy</li>
-                        <li>Join Affairs</li>
+                        <li><a href="#">Coupons</a></li>
+                        <li><a href="#">Blog Post</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Join Us</a></li>
                     </ul>
                 </div>
-                <div class="footer-col-4">
+                <div class="footer-col">
                     <h3>Follow Us</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
-                        <li>Threads</li>
+                    <ul class="social-links">
+                        <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                        <li><a href="#" aria-label="Threads">Threads</a></li>
                     </ul>
-
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <!-- Column 1: Download Our App -->
-            <div class="footer-col-1">
-                <h3>Download Our App</h3>
-                <div class="app">
-                    <a href="#"><img src="images/app-store.png" alt="App Store"></a>
-                    <a href="#"><img src="images/play-store.png" alt="Google Play Store"></a>
-
                 </div>
-                <p>Get our app for Android and iOS devices.</p>
-            </div>
-            <!-- Column 2: About Us -->
-            <div class="footer-col-2">
-                <a href="#"><img src="images/logo-white.png" alt="Company Logo"></a>
-                <p>Our mission is to make sports enjoyable and accessible for everyone, sustainably.</p>
-            </div>
-            <!-- Column 3: Useful Links -->
-            <div class="footer-col-3">
-                <h3>Useful Links</h3>
-                <ul>
-                    <li><a href="#">Coupons</a></li>
-                    <li><a href="#">Blog Post</a></li>
-                    <li><a href="#">Return Policy</a></li>
-                    <li><a href="#">Join Us</a></li>
-                </ul>
-            </div>
-            <!-- Column 4: Follow Us -->
-            <div class="footer-col-4">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Threads</a></li>
-                </ul>
             </div>
         </div>
-    </div>
-    <hr>
-    <div class="copyright">
-        <p>&copy; 2024 All Rights Reserved</p>
-    </div>
-</div>
+        <div class="copyright">
+            <p>&copy; 2024 All Rights Reserved</p>
+        </div>
+    </footer>
 
+    <button id="backToTop" aria-label="Back to Top">↑</button>
 
     <script src="script.js"></script>
 </body>
