@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+    <link rel="stylesheet" href="CSS/customerRev.css">
+    <script src="JS/c_Review.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Reviews</h1>
+        <form id="reviewForm">
+            <label for="reviewText">Write your review:</label>
+            <textarea id="reviewText" rows="5" placeholder="Share your thoughts..."></textarea>
+            
+            <label>Rate your experience:</label>
+            <div class="star-rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+
+            <button type="button" onclick="submitReview()">Submit Review</button>
+        </form>
+
+        <h2>Customer Feedback</h2>
+        <div id="reviewsContainer" class="reviews-container">
+            <!-- Reviews will be displayed here -->
+        </div>
+    </div>
+</body>
+</html>
